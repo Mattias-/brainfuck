@@ -23,7 +23,6 @@ void interpret(char *program){
                     while (progPtr && nest != 0){
                         progPtr += instr;
                         if (*progPtr == '[' || *progPtr == ']'){
-                            //printf( "Got something, %d", *progPtr);
                             nest += d(*progPtr) * instr;
                         }
                     }
